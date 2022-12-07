@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./img/logo_streamer_icon.png" type="image/png">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Jogos Zerados</title>
+</head>
+<body>
+    <!-- Menu Dropdown -->
+    <!-- <div class="menu_dropdown">
+        <div class="sidebar close">
+            <div class="logo-details">
+                <i class='bx bxs-user-circle'></i>
+                <span class="logo_name">Painel Streamer v1.0</span>
+            </div>
+            <ul class="nav-links">
+                <li>
+                    <a href="/index.html">
+                        <i class='bx bx-grid-alt'></i>
+                        <span class="link_name">HOME</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="icon-link">
+                        <a href="">
+                            <i class='bx bx-grid-alt'></i>
+                            <span class="link_name">CATEGORIAS</span>
+                        </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                    </div>
+                    <ul class="sub-menu">
+                        <li><a class="link_name" href="#">CATEGORIAS</a></li>
+                        <li><a href="/jogoszerados.html">Jogos Zerados</a></li>
+                        <li><a href="/jogossugeridos.html">Jogos Sujeridos</a></li>
+                        <li><a href="/listadejogos.html">Lista de Jogos</a></li>
+                    </ul>
+                </li>
+                <iframe
+                    id="chat_embed"
+                    scrolling="no"
+                    src="https://www.twitch.tv/embed/leokaos/chat?parent=https://www.google.com.br"
+                    height="400"
+                    width="255">
+                </iframe>
+            </ul>
+            <div class="copyright">
+                <div class="copyright-content">
+                    &copy; <a href="https://github.com/AthilaAlexandre" target="_blank">Athila Alexandre</a>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Menu Dropdown -->
+    <!-- Conteúdo Central -->
+    <div class="box">
+        <div class="inputBox">
+           <a href="https://www.twitch.tv/leokaos"><img src="/img/logo_streamer.jpg" alt="Logo"></a>
+        </div>
+        <form action="https://api.sheetmonkey.io/form/mwGB2zNdxD7kmwPtSkFoFt" method="post" id="post">
+            <fieldset>
+                <legend><b>JOGOS ZERADOS</b></legend>
+                <br>               
+                <div class="inputBox">
+                    <input type="text" name="ZERADOS EM LIVE" id="jogo" class="inputGame" required>
+                    <label for="nome" class="labelInput">Nome do Jogo</label>
+                </div>
+                <br>
+                <!-- <div class="inputBox">
+                    <input type="text" name="PLATAFORMA" id="plataforma" class="inputGame" required>
+                    <label for="nome" class="labelInput">Plataforma</label>
+                </div> -->
+                <div class="inputPlataform">
+                    <select name="PLATAFORMA" id="plataforma" required>
+                        <option value="SNES">Super Nintendo</option>
+                        <option value="N64">Nintendo 64</option>
+                        <option value="PC">PC</option>
+                        <option value="XBOX">Xbox</option>
+                        <option value="PS1">PlayStation 1</option>
+                    </select>
+                </div>                
+                <br>
+                <div class="inputBox">
+                    <label for="nome" class="labelTime">TEMPO DE JOGO</label>
+                    <input type="time" name="TEMPO DE JOGO" id="tempo" required>
+                </div>
+                
+                <div class="inputBox" required>
+                <h3><b>Avaliação do Jogo</b></h3>
+                <input type="radio" name="NOTA" id="nota1" value="⭐" required>
+                <label for="nota1">⭐</label>
+                <br>
+                <input type="radio" name="NOTA" id="nota2" value="⭐⭐">
+                <label for="nota2">⭐⭐</label>
+                <br>
+                <input type="radio" name="NOTA" id="nota3" value="⭐⭐⭐">
+                <label for="nota3">⭐⭐⭐</label>
+                <br>
+                <input type="radio" name="NOTA" id="nota4" value="⭐⭐⭐⭐">
+                <label for="nota4">⭐⭐⭐⭐</label>
+                <br>
+                <input type="radio" name="NOTA" id="nota5" value="⭐⭐⭐⭐⭐">
+                <label for="nota5">⭐⭐⭐⭐⭐</label>
+                </div>
+                <br>
+                <input type="submit" id="submit">
+            </fieldset>
+        </form>
+    </div>
+    <!-- Conteúdo Central -->
+    
+</body>
+</html>
