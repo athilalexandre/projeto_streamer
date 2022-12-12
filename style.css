@@ -170,6 +170,7 @@ body{
     width: 25%;
     max-width: 480px;
     color: yellow;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
 .box-live{
@@ -266,19 +267,32 @@ legend{
     background-color: #580b1f;
 }
 
+#plataforma::-webkit-scrollbar{
+    width: 4px;
+    border: 1px solid rgb(200, 200, 200);
+}
+
+#plataforma::-webkit-scrollbar-thumb{
+    background-color: rgb(65, 61, 61);
+    border-radius: 1px;
+}
+
 #submit{
-    background-image: linear-gradient(to right, rgb(220, 218, 218), rgb(162, 161, 161));
+    background-image: linear-gradient(to right, #580b1f, #580b1f);
+    color: white;
     width: 100%;
     border: none;
     padding: 15px;
-    color: black;
     font-size: 15px;
+    font-weight: 600;
     cursor: pointer;
     border-radius: 10px;
+    text-transform: uppercase;
 }
 
 #submit:hover{
     background-image: linear-gradient(to right, rgb(190, 188, 188), rgb(129, 128, 128));
+    color: black;
 }
 
 #rodape {
