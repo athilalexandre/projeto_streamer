@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registre jogos zerados em live, avalie e compartilhe sua experiência!">
+    <meta name="author" content="Athila Alexandre">
+    <meta property="og:title" content="Jogos Zerados">
+    <meta property="og:description" content="Registre jogos zerados em live, avalie e compartilhe sua experiência!">
+    <meta property="og:image" content="./img/logo_streamer.jpg">
+    <meta property="og:type" content="website">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./img/logo_streamer_icon.png" type="image/png">
     <!-- Boxicons CSS -->
@@ -57,77 +63,90 @@
     </div> -->
     <!-- Menu Dropdown -->
     <!-- Conteúdo Central -->
-    <div class="box">
-        <div class="inputBox">
-           <a href="https://www.twitch.tv/leokaos"><img src="./img/logo_streamer.jpg" alt="Logo"></a>
+    <main>
+        <div class="box" role="form" aria-labelledby="titulo-form">
+            <div class="inputBox logoBox">
+                <a href="https://www.twitch.tv/leokaos" aria-label="Acesse a Twitch do Leokaos">
+                    <img src="./img/logo_streamer.jpg" alt="Logo do Streamer">
+                </a>
+            </div>
+            <form action="https://api.sheetmonkey.io/form/mwGB2zNdxD7kmwPtSkFoFt" method="post" id="post" autocomplete="off">
+                <fieldset>
+                    <legend id="titulo-form"><b>JOGOS ZERADOS</b></legend>
+                    <div class="inputBox">
+                        <input type="text" name="ZERADOS EM LIVE" id="jogo" class="inputGame" required aria-required="true" aria-label="Nome do Jogo">
+                        <label for="jogo" class="labelInput">Nome do Jogo</label>
+                    </div>
+                    <div class="inputPlataform">
+                        <label for="plataforma" class="labelPlataform">Plataforma</label>
+                        <select name="PLATAFORMA" id="plataforma" required aria-required="true" aria-label="Plataforma">
+                            <option value="" disabled selected>Selecione</option>
+                            <option value="NES">NES</option>
+                            <option value="SNES">Super Nintendo</option>
+                            <option value="N64">Nintendo 64</option>
+                            <option value="Wii">Nintendo Wii</option>
+                            <option value="Wii U">Nintendo Wii U</option>
+                            <option value="Switch">Nintendo Switch</option>
+                            <option value="GB">Game Boy</option>
+                            <option value="GBC">Game Boy Color</option>
+                            <option value="GBA">Game Boy Advance</option>
+                            <option value="NDS">Nintendo DS</option>
+                            <option value="N3DS">Nintendo 3DS</option>
+                            <option value="MEGA">Mega Drive/Genesis</option>
+                            <option value="DREAMCAST">Dreamcast</option>
+                            <option value="XBOX">Xbox</option>
+                            <option value="XBOX360">Xbox 360</option>
+                            <option value="XBOXONE">Xbox One</option>
+                            <option value="PC">PC</option>
+                            <option value="PSP">PSP</option>
+                            <option value="PSV">PlayStation Vita</option>
+                            <option value="PS1">PlayStation 1</option>
+                            <option value="PS2">PlayStation 2</option>
+                            <option value="PS3">PlayStation 3</option>
+                            <option value="PS4">PlayStation 4</option>
+                            <option value="PS5">PlayStation 5</option>
+                        </select>
+                    </div>
+                    <div class="inputBox">
+                        <label for="tempo" class="labelTime">Tempo de Jogo</label>
+                        <input type="time" name="TEMPO DE JOGO" id="tempo" required aria-required="true" aria-label="Tempo de Jogo">
+                    </div>
+                    <div class="inputBox" required>
+                        <h3><b>Avaliação do Jogo</b></h3>
+                        <div class="rating-group" role="radiogroup" aria-label="Avaliação do Jogo">
+                            <input type="radio" name="NOTA" id="nota1" value="★" required aria-required="true">
+                            <label for="nota1">★</label>
+                            <input type="radio" name="NOTA" id="nota2" value="★★">
+                            <label for="nota2">★★</label>
+                            <input type="radio" name="NOTA" id="nota3" value="★★★">
+                            <label for="nota3">★★★</label>
+                            <input type="radio" name="NOTA" id="nota4" value="★★★★">
+                            <label for="nota4">★★★★</label>
+                            <input type="radio" name="NOTA" id="nota5" value="★★★★★">
+                            <label for="nota5">★★★★★</label>
+                        </div>
+                    </div>
+                    <button type="submit" id="submit">Enviar</button>
+                    <div id="form-feedback" class="form-feedback" aria-live="polite" style="display:none;"></div>
+                </fieldset>
+            </form>
         </div>
-        <form action="https://api.sheetmonkey.io/form/mwGB2zNdxD7kmwPtSkFoFt" method="post" id="post">
-            <fieldset>
-                <legend><b>JOGOS ZERADOS</b></legend>
-                <br>               
-                <div class="inputBox">
-                    <input type="text" name="ZERADOS EM LIVE" id="jogo" class="inputGame" required>
-                    <label for="nome" class="labelInput">Nome do Jogo</label>
-                </div>
-                <br>
-                <div class="inputPlataform">
-                    <select name="PLATAFORMA" id="plataforma" required>
-                        <option value="NES">NES</option>
-                        <option value="SNES">Super Nintendo</option>
-                        <option value="N64">Nintendo 64</option>
-                        <option value="Wii">Nintendo Wii</option>
-                        <option value="Wii U">Nintendo Wii U</option>
-                        <option value="Switch">Nintendo Switch</option>
-                        <option value="GB">Game Boy</option>
-                        <option value="GBC">Game Boy Color</option>
-                        <option value="GBA">Game Boy Advance</option>
-                        <option value="NDS">Nintendo DS</option>
-                        <option value="N3DS">Nintendo 3DS</option>
-                        <option value="MEGA">Mega Drive/Genesis</option>
-                        <option value="DREAMCAST">Dreamcast</option>
-                        <option value="XBOX">Xbox</option>
-                        <option value="XBOX">Xbox360</option>
-                        <option value="XBOX">XboxOne</option>
-                        <option value="PC">PC</option>
-                        <option value="PSP">PSP</option>
-                        <option value="PSV">PlayStation Vita</option>
-                        <option value="PS1">PlayStation 1</option>
-                        <option value="PS2">PlayStation 2</option>
-                        <option value="PS3">PlayStation 3</option>
-                        <option value="PS4">PlayStation 4</option>
-                        <option value="PS5">PlayStation 5</option>
-
-                    </select>
-                </div>                
-                <br>
-                <div class="inputBox">
-                    <label for="nome" class="labelTime">TEMPO DE JOGO</label>
-                    <input type="time" name="TEMPO DE JOGO" id="tempo" required>
-                </div>
-                
-                <div class="inputBox" required>
-                <h3><b>Avaliação do Jogo</b></h3>
-                <input type="radio" name="NOTA" id="nota1" value="⭐" required>
-                <label for="nota1">⭐</label>
-                <br>
-                <input type="radio" name="NOTA" id="nota2" value="⭐⭐">
-                <label for="nota2">⭐⭐</label>
-                <br>
-                <input type="radio" name="NOTA" id="nota3" value="⭐⭐⭐">
-                <label for="nota3">⭐⭐⭐</label>
-                <br>
-                <input type="radio" name="NOTA" id="nota4" value="⭐⭐⭐⭐">
-                <label for="nota4">⭐⭐⭐⭐</label>
-                <br>
-                <input type="radio" name="NOTA" id="nota5" value="⭐⭐⭐⭐⭐">
-                <label for="nota5">⭐⭐⭐⭐⭐</label>
-                </div>
-                <br>
-                <input type="submit" id="submit">
-            </fieldset>
-        </form>
-    </div>
-    <!-- Conteúdo Central -->
-    
+        <section class="listagem-placeholder" aria-label="Jogos já registrados">
+            <h2>Em breve: Lista de Jogos Zerados</h2>
+            <p>Você poderá ver aqui todos os jogos já registrados pela comunidade!</p>
+        </section>
+    </main>
+    <footer id="rodape">
+        &copy; <a href="https://github.com/AthilaAlexandre" target="_blank" rel="noopener">Athila Alexandre</a> | 2024
+    </footer>
+    <script>
+    // Feedback visual após envio do formulário
+    document.getElementById('post').addEventListener('submit', function(e) {
+        var feedback = document.getElementById('form-feedback');
+        feedback.style.display = 'block';
+        feedback.textContent = 'Obrigado por enviar! Seu jogo foi registrado.';
+        setTimeout(function(){ feedback.style.display = 'none'; }, 5000);
+    });
+    </script>
 </body>
 </html>
