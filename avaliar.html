@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Avalie jogos zerados em live.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/logo_streamer_icon.png" type="image/png">
+    <title>Avaliar Jogos Zerados</title>
+</head>
+<body>
+    <header class="header-login">
+        <div class="login-area" id="login-area">
+            <button id="twitch-login" class="twitch-btn">
+                <i class='bx bxl-twitch'></i> Entrar com Twitch
+            </button>
+        </div>
+    </header>
+    <main class="avaliar-main">
+        <div class="box avaliar-box">
+            <h2>Avaliar Jogo Zerado</h2>
+            <form id="form-avaliar">
+                <div class="inputBox">
+                    <label for="busca-jogo">Buscar Jogo</label>
+                    <input type="text" id="busca-jogo" class="inputGame" placeholder="Digite o nome do jogo..." autocomplete="off" required>
+                    <div id="sugestoes-jogo" class="sugestoes-jogo"></div>
+                </div>
+                <div id="jogo-selecionado" class="jogo-selecionado"></div>
+                <div class="inputBox">
+                    <label for="tempo">Tempo de Jogo</label>
+                    <input type="time" id="tempo" required>
+                </div>
+                <div class="inputBox">
+                    <label>Avaliação</label>
+                    <div class="rating-group">
+                        <input type="radio" name="nota" id="nota1" value="1" required><label for="nota1">★</label>
+                        <input type="radio" name="nota" id="nota2" value="2"><label for="nota2">★★</label>
+                        <input type="radio" name="nota" id="nota3" value="3"><label for="nota3">★★★</label>
+                        <input type="radio" name="nota" id="nota4" value="4"><label for="nota4">★★★★</label>
+                        <input type="radio" name="nota" id="nota5" value="5"><label for="nota5">★★★★★</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn-home btn-avaliar">Salvar Avaliação</button>
+                <div id="form-feedback" class="form-feedback" aria-live="polite" style="display:none;"></div>
+            </form>
+        </div>
+    </main>
+    <footer id="rodape">
+        &copy; <a href="https://github.com/AthilaAlexandre" target="_blank" rel="noopener">Athila Alexandre</a> | 2024
+    </footer>
+    <script src="js/avaliar.js"></script>
+</body>
+</html> 

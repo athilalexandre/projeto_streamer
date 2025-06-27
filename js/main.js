@@ -1,0 +1,1 @@
+// Animações ou interações da home podem ser adicionadas aqui. 

@@ -1,0 +1,18 @@
+{
+  "name": "projeto_streamer_backend",
+  "version": "1.0.0",
+  "description": "Mini backend para jogos zerados do streamer.",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+} 

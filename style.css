@@ -288,3 +288,415 @@ footer#rodape a:hover {
         font-size: 1em;
     }
 }
+
+.header-login {
+    width: 100vw;
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 18px 6vw 0 0;
+    min-height: 60px;
+    z-index: 10;
+}
+
+.login-area {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.twitch-btn {
+    background: linear-gradient(90deg, #9147ff 60%, #ff5252 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 22px;
+    font-size: 1em;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 8px rgba(145,71,255,0.12);
+    transition: background 0.2s, transform 0.2s;
+}
+.twitch-btn:hover, .twitch-btn:focus {
+    background: linear-gradient(90deg, #ff5252 0%, #9147ff 100%);
+    transform: translateY(-2px) scale(1.04);
+}
+
+.avatar-twitch {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #9147ff;
+    margin-right: 8px;
+    box-shadow: 0 1px 4px rgba(145,71,255,0.18);
+}
+.twitch-nome {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-right: 8px;
+}
+.logout-btn {
+    background: #222;
+    color: #ff5252;
+    border: none;
+    border-radius: 6px;
+    padding: 7px 14px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background 0.2s, color 0.2s;
+}
+.logout-btn:hover, .logout-btn:focus {
+    background: #ff5252;
+    color: #fff;
+}
+
+.listagem-jogos {
+    margin: 32px auto 0 auto;
+    max-width: 600px;
+    background: rgba(0,0,0,0.7);
+    border-radius: 14px;
+    padding: 20px 24px 18px 24px;
+    color: #ffe066;
+    text-align: center;
+    box-shadow: 0 0 12px rgba(0,0,0,0.18);
+    animation: fadeIn 0.7s;
+}
+.listagem-jogos h2 {
+    margin-top: 0;
+    color: #9147ff;
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+.jogos-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 18px;
+}
+.jogo-card {
+    background: linear-gradient(90deg, #222 60%, #580b1f 100%);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(145,71,255,0.10);
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    transition: transform 0.18s, box-shadow 0.18s;
+    border: 1.5px solid #9147ff22;
+    animation: fadeInUp 0.7s;
+}
+.jogo-card:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 4px 16px #9147ff33;
+    border-color: #9147ff;
+}
+.jogo-info {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+.jogo-nome {
+    color: #ffe066;
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.jogo-plataforma {
+    color: #ff5252;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.jogo-extra {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    font-size: 1em;
+}
+.jogo-tempo {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.jogo-nota {
+    color: #ffe066;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.jogo-usuario {
+    color: #9147ff;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: none; }
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: none; }
+}
+
+/* Responsividade extra para cards */
+@media (max-width: 700px) {
+    .listagem-jogos {
+        max-width: 98vw;
+        padding: 10px 2vw 10px 2vw;
+    }
+    .jogo-card {
+        padding: 12px 8px;
+    }
+}
+
+/* HOME */
+.home-main {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+.home-box {
+    background: rgba(0,0,0,0.85);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #9147ff22;
+    padding: 40px 32px 32px 32px;
+    text-align: center;
+    max-width: 420px;
+    margin: 32px auto;
+    animation: fadeIn 0.7s;
+}
+.home-logo {
+    width: 120px;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px #9147ff33;
+}
+.home-box h1 {
+    color: #ffe066;
+    font-size: 2.1em;
+    margin-bottom: 10px;
+}
+.home-box p {
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 24px;
+}
+.home-btns {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 18px;
+}
+.btn-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1.1em;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 0;
+    background: linear-gradient(90deg, #9147ff 60%, #ff5252 100%);
+    color: #fff;
+    box-shadow: 0 2px 8px #9147ff22;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+}
+.btn-home:hover, .btn-home:focus {
+    background: linear-gradient(90deg, #ff5252 0%, #9147ff 100%);
+    color: #fff;
+    transform: scale(1.04);
+}
+
+/* AVALIAR */
+.avaliar-main {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+.avaliar-box {
+    max-width: 420px;
+    width: 100%;
+    margin: 32px auto;
+    animation: fadeIn 0.7s;
+}
+.sugestoes-jogo {
+    background: #222;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #9147ff22;
+    margin-top: 2px;
+    max-height: 180px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.sugestao-jogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    cursor: pointer;
+    color: #ffe066;
+    border-bottom: 1px solid #9147ff22;
+    transition: background 0.18s;
+}
+.sugestao-jogo:last-child { border-bottom: none; }
+.sugestao-jogo:hover {
+    background: #9147ff33;
+}
+.sugestao-jogo img {
+    width: 38px;
+    height: 38px;
+    border-radius: 6px;
+    object-fit: cover;
+    background: #111;
+}
+.jogo-preview {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 10px 0 8px 0;
+    background: #222;
+    border-radius: 8px;
+    padding: 8px 12px;
+    box-shadow: 0 1px 4px #9147ff22;
+}
+.jogo-preview img {
+    width: 54px;
+    height: 54px;
+    border-radius: 8px;
+    object-fit: cover;
+    background: #111;
+}
+
+/* JOGOS - CARDS FLIP */
+.jogos-main {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+.jogos-box {
+    max-width: 900px;
+    width: 100%;
+    margin: 32px auto;
+    animation: fadeIn 0.7s;
+}
+.jogos-lista-publica {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+    margin-top: 24px;
+}
+.flip-card {
+    background: transparent;
+    width: 220px;
+    height: 320px;
+    perspective: 1000px;
+    margin-bottom: 12px;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(.4,2,.6,1);
+    transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner, .flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 14px;
+    box-shadow: 0 2px 12px #9147ff22;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #222;
+    padding: 18px 12px;
+}
+.flip-card-front {
+    z-index: 2;
+    background: linear-gradient(120deg, #9147ff 60%, #222 100%);
+}
+.flip-card-front img {
+    width: 120px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 8px #9147ff33;
+    background: #111;
+}
+.nota-grande {
+    font-size: 2.2em;
+    color: #ffe066;
+    font-weight: 900;
+    margin-top: 8px;
+    text-shadow: 0 2px 8px #222;
+}
+.flip-card-back {
+    transform: rotateY(180deg);
+    background: linear-gradient(120deg, #222 60%, #ff5252 100%);
+    color: #fff;
+    text-align: center;
+    padding-top: 24px;
+}
+.flip-card-back h3 {
+    color: #ffe066;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+.flip-card-back p {
+    margin: 6px 0;
+    font-size: 1em;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+    .jogos-lista-publica { gap: 18px; }
+    .flip-card { width: 180px; height: 260px; }
+    .flip-card-front img { width: 90px; height: 120px; }
+}
+@media (max-width: 600px) {
+    .home-box, .avaliar-box, .jogos-box {
+        max-width: 98vw;
+        padding: 10px 2vw 10px 2vw;
+    }
+    .jogos-lista-publica { gap: 10px; }
+    .flip-card { width: 140px; height: 180px; }
+    .flip-card-front img { width: 60px; height: 80px; }
+}
